@@ -16,8 +16,24 @@ public class Member {
     @JoinColumn(name="team_id")
     private Team team;
 
+    public Member(String id, String username) {
+
+        this.id = id;
+        this.username = username;
+    }
+
+    public Team getTeam() {
+        return team;
+    }
+
     public void setTeam(Team team) {
-        this.team =team;
+
+        if(this.team != null) {
+            this.team.getMembers().remove(this);
+        }
+
+        this.team = team;
+        team.getMembers().add(this);
     }
 
     public String getId() {

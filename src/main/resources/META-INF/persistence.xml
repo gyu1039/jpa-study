@@ -23,7 +23,7 @@
             <property name="hibernate.id.new_generator_mappings" value="true" />
 
             <!-- 테이블을 자동으로 생성 -->
-            <property name="hibernate.hbm2ddl.auto" value="create" />
+<!--            <property name="hibernate.hbm2ddl.auto" value="create" />-->
 
             <!-- 기본 매핑 이름 -->
             <property name="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.ImprovedNamingStrategy" />
